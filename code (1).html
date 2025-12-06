@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frexxdzy Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #fff; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; }
+        .search { display: flex; }
+        .search input { padding: 5px; border: 1px solid #ccc; }
+        .search button { padding: 5px 10px; background-color: #007bff; color: white; border: none; }
+        .carousel { position: relative; width: 100%; height: 300px; overflow: hidden; }
+        .slides { display: flex; width: 300%; animation: slide 9s infinite; }
+        .slide { width: 100%; height: 300px; background-size: cover; background-position: center; }
+        @keyframes slide { 0% { transform: translateX(0); } 33% { transform: translateX(-100%); } 66% { transform: translateX(-200%); } 100% { transform: translateX(0); } }
+        .product-ad { width: 100%; height: 200px; background-size: cover; background-position: center; margin: 20px 0; border-radius: 5px; }
+        .filters { text-align: center; padding: 10px; background: white; margin: 20px; border-radius: 5px; }
+        .filters button { margin: 0 10px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .filters button:hover { background-color: #0056b3; }
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
+        .product { background: white; padding: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .product img { width: 100%; height: 150px; object-fit: cover; }
+        .product button { padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
+        .product button:hover { background-color: #218838; }
+        .product button i { margin-right: 5px; }
+        .info { padding: 20px; background: white; margin: 20px; border-radius: 5px; }
+        .care { padding: 20px; background: white; margin: 20px; border-radius: 5px; }
+        footer { background: #333; color: white; text-align: center; padding: 10px; }
+        footer i { margin: 0 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Marketplace</div>
+            <div class="search">
+                <input type="text" placeholder="Cari produk...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="carousel">
+        <div class="slides">
+            <div class="slide" style="background-image: url('https://via.placeholder.com/800x300?text=Iklan+1');"></div>
+            <div class="slide" style="background-image: url('https://via.placeholder.com/800x300?text=Iklan+2');"></div>
+            <div class="slide" style="background-image: url('https://via.placeholder.com/800x300?text=Iklan+3');"></div>
+        </div>
+    </section>
+
+    <!-- Iklan Produk Landscape -->
+    <section class="product-ad" style="background-image: url('https://via.placeholder.com/800x200?text=Iklan+Produk+Landscape');">
+        <!-- Iklan produk landscape di sini -->
+    </section>
+
+    <section class="filters">
+        <button onclick="filterProducts('all')">Semua</button>
+        <button onclick="filterProducts('controller')">Controller</button>
+        <button onclick="filterProducts('keyboard')">Keyboard</button>
+        <button onclick="filterProducts('mouse')">Mouse</button>
+    </section>
+
+    <section class="products">
+        <!-- Controller Products -->
+        <div class="product controller">
+            <img src="https://via.placeholder.com/200x150?text=Controller+1" alt="Controller 1">
+            <h3>Controller 1</h3>
+            <p>Rp 100.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product controller">
+            <img src="https://via.placeholder.com/200x150?text=Controller+2" alt="Controller 2">
+            <h3>Controller 2</h3>
+            <p>Rp 110.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product controller">
+            <img src="https://via.placeholder.com/200x150?text=Controller+3" alt="Controller 3">
+            <h3>Controller 3</h3>
+            <p>Rp 120.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product controller">
+            <img src="https://via.placeholder.com/200x150?text=Controller+4" alt="Controller 4">
+            <h3>Controller 4</h3>
+            <p>Rp 130.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product controller">
+            <img src="https://via.placeholder.com/200x150?text=Controller+5" alt="Controller 5">
+            <h3>Controller 5</h3>
+            <p>Rp 140.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product controller">
+            <img src="https://via.placeholder.com/200x150?text=Controller+6" alt="Controller 6">
+            <h3>Controller 6</h3>
+            <p>Rp 150.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product controller">
+            <img src="https://via.placeholder.com/200x150?text=Controller+7" alt="Controller 7">
+            <h3>Controller 7</h3>
+            <p>Rp 160.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product controller">
+            <img src="https://via.placeholder.com/200x150?text=Controller+8" alt="Controller 8">
+            <h3>Controller 8</h3>
+            <p>Rp 170.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product controller">
+            <img src="https://via.placeholder.com/200x150?text=Controller+9" alt="Controller 9">
+            <h3>Controller 9</h3>
+            <p>Rp 180.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product controller">
+            <img src="https://via.placeholder.com/200x150?text=Controller+10" alt="Controller 10">
+            <h3>Controller 10</h3>
+            <p>Rp 190.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+
+        <!-- Keyboard Products -->
+        <div class="product keyboard">
+            <img src="https://via.placeholder.com/200x150?text=Keyboard+1" alt="Keyboard 1">
+            <h3>Keyboard 1</h3>
+            <p>Rp 200.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product keyboard">
+            <img src="https://via.placeholder.com/200x150?text=Keyboard+2" alt="Keyboard 2">
+            <h3>Keyboard 2</h3>
+            <p>Rp 210.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product keyboard">
+            <img src="https://via.placeholder.com/200x150?text=Keyboard+3" alt="Keyboard 3">
+            <h3>Keyboard 3</h3>
+            <p>Rp 220.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product keyboard">
+            <img src="https://via.placeholder.com/200x150?text=Keyboard+4" alt="Keyboard 4">
+            <h3>Keyboard 4</h3>
+            <p>Rp 230.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product keyboard">
+            <img src="https://via.placeholder.com/200x150?text=Keyboard+5" alt="Keyboard 5">
+            <h3>Keyboard 5</h3>
+            <p>Rp 240.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product keyboard">
+            <img src="https://via.placeholder.com/200x150?text=Keyboard+6" alt="Keyboard 6">
+            <h3>Keyboard 6</h3>
+            <p>Rp 250.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product keyboard">
+            <img src="https://via.placeholder.com/200x150?text=Keyboard+7" alt="Keyboard 7">
+            <h3>Keyboard 7</h3>
+            <p>Rp 260.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product keyboard">
+            <img src="https://via.placeholder.com/200x150?text=Keyboard+8" alt="Keyboard 8">
+            <h3>Keyboard 8</h3>
+            <p>Rp 270.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product keyboard">
+            <img src="https://via.placeholder.com/200x150?text=Keyboard+9" alt="Keyboard 9">
+            <h3>Keyboard 9</h3>
+            <p>Rp 280.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product keyboard">
+            <img src="https://via.placeholder.com/200x150?text=Keyboard+10" alt="Keyboard 10">
+            <h3>Keyboard 10</h3>
+            <p>Rp 290.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+
+        <!-- Mouse Products -->
+        <div class="product mouse">
+            <img src="https://via.placeholder.com/200x150?text=Mouse+1" alt="Mouse 1">
+            <h3>Mouse 1</h3>
+            <p>Rp 50.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product mouse">
+            <img src="https://via.placeholder.com/200x150?text=Mouse+2" alt="Mouse 2">
+            <h3>Mouse 2</h3>
+            <p>Rp 60.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product mouse">
+            <img src="https://via.placeholder.com/200x150?text=Mouse+3" alt="Mouse 3">
+            <h3>Mouse 3</h3>
+            <p>Rp 70.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product mouse">
+            <img src="https://via.placeholder.com/200x150?text=Mouse+4" alt="Mouse 4">
+            <h3>Mouse 4</h3>
+            <p>Rp 80.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product mouse">
+            <img src="https://via.placeholder.com/200x150?text=Mouse+5" alt="Mouse 5">
+            <h3>Mouse 5</h3>
+            <p>Rp 90.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product mouse">
+            <img src="https://via.placeholder.com/200x150?text=Mouse+6" alt="Mouse 6">
+            <h3>Mouse 6</h3>
+            <p>Rp 100.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product mouse">
+            <img src="https://via.placeholder.com/200x150?text=Mouse+7" alt="Mouse 7">
+            <h3>Mouse 7</h3>
+            <p>Rp 110.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product mouse">
+            <img src="https://via.placeholder.com/200x150?text=Mouse+8" alt="Mouse 8">
+            <h3>Mouse 8</h3>
+            <p>Rp 120.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product mouse">
+            <img src="https://via.placeholder.com/200x150?text=Mouse+9" alt="Mouse 9">
+            <h3>Mouse 9</h3>
+            <p>Rp 130.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+        <div class="product mouse">
+            <img src="https://via.placeholder.com/200x150?text=Mouse+10" alt="Mouse 10">
+            <h3>Mouse 10</h3>
+            <p>Rp 140.000</p>
+            <button><i class="fas fa-shopping-cart"></i> Beli</button>
+        </div>
+    </section>
+
+    <section class="info">
+        <h2>Detail Informasi Marketplace</h2>
+        <p>Marketplace ini menyediakan berbagai produk berkualitas dengan harga terjangkau. Kami berkomitmen untuk memberikan pengalaman belanja yang aman dan nyaman. Didirikan pada 2023, kami telah melayani ribuan pelanggan di seluruh Indonesia.</p>
+        <ul>
+            <li>Pengiriman cepat dan gratis untuk pembelian di atas Rp 500.000.</li>
+            <li>Garansi produk hingga 1 tahun.</li>
+            <li>Pembayaran aman via transfer bank atau e-wallet.</li>
+        </ul>
+    </section>
+
+    <section class="care">
+        <h2>Layanan Customer Care</h2>
+        <p>Hubungi kami untuk bantuan:</p>
+        <p>Email: support@marketplace.com | Telepon: 0812-3456-7890</p>
+        <h3>FAQ</h3>
+        <ul>
+            <li><strong>Bagaimana cara memesan?</strong> Pilih produk, tambahkan ke keranjang, dan checkout.</li>
+            <li><strong>Apakah ada pengembalian?</strong> Ya, dalam 7 hari jika produk cacat.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Frexxdzy Store. .</p>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+    </footer>
+
+    <script>
+        function filterProducts(category) {
+            const products =
